@@ -15,9 +15,6 @@ export default gql`
 
   type Query {
     getAllMessages: [Message!]!
-  }
-
-  type Query {
     getMessage(ID: ID!): Message
   }
 
@@ -25,13 +22,7 @@ export default gql`
     # broken up as:
     # mutation     input var    input args    output
     createMessage(messageArgs: MessageArgs): Message!
-  }
-
-  type Mutation {
     updateMessage(ID: ID!, text: String!): Message!
-  }
-
-  type Mutation {
     deleteMessage(ID: ID!): Message!
   }
 `;

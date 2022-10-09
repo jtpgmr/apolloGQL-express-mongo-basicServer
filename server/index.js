@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 
 import connectDB from "./config/db.js";
-import typeDefs from "./graphql/typeDefs.js";
+import { messageTypeDefs, userTypeDefs } from "./graphql/typeDefs/index.js";
 import resolvers from "./graphql/resolvers/index.js";
 
 dotenv.config();
@@ -16,7 +16,10 @@ const app = express();
 connectDB();
 app.use(cors());
 
-const server = new ApolloServer({ typeDefs, resolvers });
+const server = new ApolloServer({ 
+  typeDefs: [messageTypeDefs, userTypeDefs], 
+  resolvers 
+});
 
 await server.start();
 

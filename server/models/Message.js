@@ -1,7 +1,10 @@
 import { Schema, model } from "mongoose";
 
 const messageSchema = new Schema({
-  text: String,
+  text: { 
+    type: String,
+    required: true
+  },
   createdAt: String,
   createdBy: String,
 });

@@ -8,6 +8,18 @@ mutation($messageArgs: MessageArgs) {
   }
 }
 ```
+### JSON object containing an example inputs for the operation above
+```js
+{
+"messageArgs": {
+    "text": "hi",
+    "username": "jtp"
+  }
+}
+```
+
+<br>
+<br>
 
 ### **Update (PUT) Message** Mutation
 ```js
@@ -19,6 +31,19 @@ mutation($id: ID!, $text: String!) {
   }
 }
 ```
+
+### JSON object containing an example inputs for the operation above
+```js
+{
+"messageArgs": {
+    "text": "hi",
+    "username": "jtp"
+  }
+}
+```
+
+<br>
+<br>
 
 ### **Delete Message** Mutation
 ```js

@@ -3,7 +3,7 @@
   - #### Queries are analagous to HTTP **GET** requests
   - #### Mutations are analagous to and encompass HTTP **POST**, **PUT** and **DELETE** requests
 
-<br />
+<br>
 
 - #### **Operation Type Input Params/Args**: A field in which an input parameter, along with its type, are passed into the operation before it executes
   - #### The **$** symbol signifies a dynamic variable

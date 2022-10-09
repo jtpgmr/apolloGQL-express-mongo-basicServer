@@ -1,6 +1,6 @@
-import Message from "../../models/Message.js";
+import { Message } from "../../models/index.js";
 
-const messages = {
+const message = {
   Query: {
     getAllMessages: async () => await Message.find(),
     getMessage: async (_, { ID }) => await Message.findById(ID),
@@ -16,6 +16,7 @@ const messages = {
       const res = await newMessage.save();
       // console.log(res);
       // console.log(res._id);
+      // console.log(res._id.toString());
       // console.log(res.id);
       return {
         id: res.id,
@@ -39,4 +40,4 @@ const messages = {
   },
 };
 
-export default messages;
+export default message;
